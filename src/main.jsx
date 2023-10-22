@@ -5,7 +5,7 @@ import ErrorPage from './routes/ErrorPage.jsx';
 import RepositoryList from './routes/RepositoryLists.jsx';
 import Repository from './routes/Repository.jsx';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { getRepo } from './utils/index.js';
+import { getRepo, getRepos } from './utils/index.js';
 import './index.css';
 
 const router = createBrowserRouter([
@@ -13,6 +13,7 @@ const router = createBrowserRouter([
     path: '/',
     element: <Root />,
     errorElement: <ErrorPage />,
+    loader: getRepos,
     children: [
       {
         path: '/',
