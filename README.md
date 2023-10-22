@@ -1,5 +1,5 @@
 # GitHub Portfolio React App
-
+<img width="800" src="https://github.com/ozo-vehe/github-portfolio/blob/main/screenshot.png" />
 ## Overview
 
 This is a React-based portfolio project that fetches data from the GitHub API to display a list of repositories and detailed information for each repository. The project utilizes React, React Router for navigation with nested routes, and an Error Boundary for handling errors gracefully. Additionally, it includes well-designed UI to enhance the user experience.
