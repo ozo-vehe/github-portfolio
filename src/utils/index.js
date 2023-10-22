@@ -1,6 +1,5 @@
 import { Octokit } from 'octokit';
-const TOKEN = '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';
-
+const TOKEN = import.meta.env.VITE_GITHUB_TOKEN;
 // Create a new instance of Octokit
 const octokit = new Octokit({
   auth: TOKEN,

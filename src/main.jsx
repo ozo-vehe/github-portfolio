@@ -6,7 +6,7 @@ import RepositoryList from './routes/RepositoryLists.jsx';
 import Repository from './routes/Repository.jsx';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { getRepo } from './utils/index.js';
-import './index.css'
+import './index.css';
 
 const router = createBrowserRouter([
   {
