@@ -5,15 +5,19 @@ import ErrorPage from './routes/ErrorPage.jsx';
 import RepositoryList from './routes/RepositoryLists.jsx';
 import Repository from './routes/Repository.jsx';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { getRepo, getRepos } from './utils/index.js';
+import { getRepo, getRepos, getUser } from './utils/index.js';
 import './index.css';
+
+const rootData = async () => {
+  return { repositories: await getRepos(), user: await getUser() };
+}
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Root />,
     errorElement: <ErrorPage />,
-    loader: getRepos,
+    loader: rootData,
     children: [
       {
         path: '/',
